@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  host:     <%= ENV['IP'] %>
+
+development:
+  <<: *default
+  database: bapp_development
+
+test:
+  <<: *default
+  database: bapp_test
+
+production:
+  <<: *default
+  database: bapp_production
+  username: bapp
+  password: <%= ENV['BAPP_DATABASE_PASSWORD'] %>
