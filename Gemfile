@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'jquery-turbolinks', '~> 2.1'
 gem 'annotate', '~> 2.7'
 gem 'rails', '~> 4.2', '>= 4.2.5.1'
@@ -17,6 +18,7 @@ gem 'sdoc', '~> 0.4.1', group: :doc
 group :development, :test do
   gem 'byebug', '~> 8.2', '>= 8.2.2'
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller', '~> 0.7.2'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 end
 
